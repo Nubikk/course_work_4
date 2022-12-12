@@ -7,14 +7,3 @@ name:AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD
 phisycal_core:8
 all_core:16
 freq_max:3801.00Ìדצ
-
-volume:31.93GiB
-aviable:22.14GiB
-used:9.79GiB
-
-file_system:NTFS
-size_total:953.87GiB
-size_used:590.82GiB
-size_free:363.05GiB
-percent:61.9
-

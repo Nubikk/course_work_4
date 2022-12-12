@@ -12,13 +12,13 @@ freq_max:3801.00Ìדצ
 
 INFO ABOUT RAM
 volume:31.93GiB
-aviable:22.15GiB
-used:9.78GiB
+aviable:22.92GiB
+used:9.01GiB
 
 INFO ABOUT DISK
 file_system:NTFS
 size_total:953.87GiB
-size_used:590.82GiB
-size_free:363.05GiB
+size_used:590.87GiB
+size_free:363.00GiB
 percent:61.9
 

@@ -32,29 +32,30 @@ class Logic(Window):
         return files_to_read
 
     def ReadFiles(self):
-        #files = self.CompilateFiles()
+        files_r = []
+        for root, dirs, files in os.walk("."):
+            for filename in files:
+                if ".txt" in filename:
+                    files_r.append(filename)
+
         data = ''
-        #for file in files:
-        with open("Nubikk.txt", 'r') as f:
-            #f = open(r'C:\Users\Flaki\PycharmProjects\pythonProject\text.txt', 'r')
-            cnt = 0
-            for line in f:
-                data = line
-                if cnt == 1:
-                    break
-                cnt += 1
-                #data = line
-                #break
-            all_data =''
-            all_data += 'INFO ABOUT SYSTEM\n'
-            all_data += f.read()
-            name = data[10:len(data)-1:]
-            self.info_about_all_pc[name] = all_data
-        f.close()
+        for file in files_r:
+            with open(file, 'r') as f:
+                cnt = 0
+                for line in f:
+                    data = line
+                    if cnt == 1:
+                        break
+                    cnt += 1
+                all_data =''
+                all_data += 'INFO ABOUT SYSTEM\n'
+                all_data += f.read()
+                name = data[10:len(data)-1:]
+                self.info_about_all_pc[name] = all_data
+            f.close()
 
     def FillComboBox(self):
         self.ReadFiles()
-        self.info_about_all_pc['FLAKI'] = 'TEST TEST TEST'
         self.comboBox.addItems([str(i) for i in self.info_about_all_pc.keys()])
 
     def FillInfo(self):
